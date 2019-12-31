@@ -1,8 +1,10 @@
 <template>
   <Layout>
-    <Header style="background-color: transparent;margin-top: 20px;">
-      <seekBox></seekBox>
-    </Header>
+    <Affix>
+      <Header style="background-color: transparent;">
+        <seekBox></seekBox>
+      </Header>
+    </Affix>
     <Content>
       <contents></contents>
     </Content>
@@ -57,3 +59,8 @@ export default {
   }
 }
 </script>
+<style>
+  .ivu-layout .ivu-affix{
+    background: #ffffff;
+  }
+</style>

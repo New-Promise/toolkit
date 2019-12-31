@@ -1,5 +1,5 @@
 <template>
-  <div id="view"></div>
+  <div id="view" style="height:100%;"></div>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
     console.log(window)
     window.jQuery('#view').mergely({
       width: 'auto',
-      height: 400,
+      height: 500,
       license: 'lgpl-separate-notice',
       cmsettings: {
         readOnly: false,
