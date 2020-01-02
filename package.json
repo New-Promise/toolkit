@@ -1,7 +1,7 @@
 {
   "name": "toolkit",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +11,7 @@
     "codemirror": "^5.50.0",
     "core-js": "^3.4.3",
     "diff-match-patch": "^1.0.4",
+    "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "view-design": "^4.0.2",
     "vue": "^2.6.10",
@@ -57,6 +58,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }

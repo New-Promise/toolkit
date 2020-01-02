@@ -1,21 +1,26 @@
 <template>
-  <div id="view" style="height:100%;"></div>
+  <div id="view" style="height:100%;width: 100%;text-align: left;"></div>
 </template>
 
 <script>
 export default {
   mounted () {
-    console.log(window)
-    window.jQuery('#view').mergely({
-      width: 'auto',
-      height: 500,
-      license: 'lgpl-separate-notice',
-      cmsettings: {
-        readOnly: false,
-        lineWrapping: true
-      },
-      lhs: function (setValue) {
-        setValue(`/*以下为演示内容，请添加您自己的内容 ~_~ */
+    setTimeout(() => {
+      this.textcontrast()
+    })
+  },
+  methods: {
+    textcontrast () {
+      window.jQuery('#view').mergely({
+        width: window.jQuery('#view').width(),
+        height: window.jQuery('#view').height(),
+        license: 'lgpl-separate-notice',
+        cmsettings: {
+          readOnly: false,
+          lineWrapping: true
+        },
+        lhs: function (setValue) {
+          setValue(`/*以下为演示内容，请添加您自己的内容 ~_~ */
 
 html,
 body {
@@ -59,9 +64,9 @@ body {
   transition: opacity 0.25s ease-out;
   opacity: 0;
 }`)
-      },
-      rhs: function (setValue) {
-        setValue(`/*以下为演示内容，请添加您自己的内容 ^_^ */
+        },
+        rhs: function (setValue) {
+          setValue(`/*以下为演示内容，请添加您自己的内容 ^_^ */
 
 html,
 body {
@@ -105,8 +110,9 @@ body {
   transition: opacity 0.25s ease-out;
   opacity: 0;
 }`)
-      }
-    })
+        }
+      })
+    }
   }
 }
 </script>

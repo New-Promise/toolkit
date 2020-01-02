@@ -18,6 +18,7 @@ export default {
   methods: {
     getMakeReport () {
       console.log(this.seekData)
+      // this.$router.push({ name: 'main' })
     }
   }
 }

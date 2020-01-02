@@ -1,21 +1,66 @@
 import Home from '../views/Home.vue'
-
+import Main from '$c/main/main.vue'
 export default [
   {
     path: '/',
     name: 'home',
+    meta: {
+      icon: 'ios-contact',
+      title: '首页'
+    },
     component: Home
   },
   {
-    path: '/fileCompare',
-    name: 'fileCompare',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('@/views/Home/layerModal/textContrast.vue'),
+    path: '/main',
+    name: 'main',
     meta: {
-      icon: 'ios-navigate',
+      icon: 'ios-contact',
       title: '文本比对'
-    }
+    },
+    component: Main,
+    children: [
+      {
+        path: '/fileCompare',
+        name: 'fileCompare',
+        component: () => import('@/views/Home/layerModal/textContrast.vue'),
+        meta: {
+          icon: 'ios-navigate',
+          title: '文本比对'
+        }
+      },
+      {
+        path: '/file',
+        name: 'file',
+        component: () => import('@/views/About.vue'),
+        meta: {
+          icon: 'ios-navigate',
+          title: 'ces'
+        }
+      }
+    ]
+  },
+  {
+    path: '/401',
+    name: 'error_401',
+    meta: {
+      hideInMenu: true
+    },
+    component: () => import('$c/error-page/401.vue')
+  },
+  {
+    path: '/500',
+    name: 'error_500',
+    meta: {
+      hideInMenu: true
+    },
+    component: () => import('$c/error-page/500.vue')
+  },
+  {
+    path: '*',
+    name: 'error_404',
+    meta: {
+      hideInMenu: true
+    },
+    component: () => import('$c/error-page/404.vue')
   }
 ]
