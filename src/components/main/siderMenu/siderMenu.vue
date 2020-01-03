@@ -38,21 +38,12 @@ export default {
   components: {
     seek: require('./seekBox/seek').default
   },
-  props: {
-    activeName: {
-      type: String,
-      default: 'fileCompare'
-    },
-    openNames: {
-      type: Array,
-      default: () => []
-    }
-  },
   data () {
     return {
       logo,
       openedNames: ['main'],
-      menuData: []
+      menuData: [],
+      activeName: []
     }
   },
   methods: {
@@ -76,8 +67,9 @@ export default {
     }
   },
   created () {
-    console.log(this.menuData)
+    console.log(this.$route.name)
     Object.assign(this.menuData, this.$router.options.routes)
+    this.activeName = this.$route.name
   }
 }
 </script>

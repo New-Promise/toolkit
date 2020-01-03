@@ -29,12 +29,12 @@ export default [
         }
       },
       {
-        path: '/file',
-        name: 'file',
-        component: () => import('@/views/About.vue'),
+        path: '/jsonTool',
+        name: 'jsonTool',
+        component: () => import('@/views/jsonVerify/jsonVerify.vue'),
         meta: {
           icon: 'ios-navigate',
-          title: 'ces'
+          title: 'json工具'
         }
       }
     ]

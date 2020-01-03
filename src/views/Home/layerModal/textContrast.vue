@@ -1,5 +1,5 @@
 <template>
-  <div id="view" style="height:100%;width: 100%;text-align: left;"></div>
+  <div id="view" style="height:100%;width: 100%;text-align: left;background-color: #171717;"></div>
 </template>
 
 <script>

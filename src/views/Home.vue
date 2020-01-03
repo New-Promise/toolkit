@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout style="overflow: auto;">
     <Affix>
       <Header style="background-color: transparent;">
         <seekBox></seekBox>

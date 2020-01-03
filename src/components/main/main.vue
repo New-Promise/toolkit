@@ -1,12 +1,12 @@
 <template>
-  <Layout style="height: 100%;" class="main" :class="isIe9 ? 'mainIe' : ''">
+  <Layout style="height: 100%;width:100%;overflow: hidden;" class="main" :class="isIe9 ? 'mainIe' : ''">
     <Sider hide-trigger :style="{background: '#fff', width: '240px', maxWidth: '240px', flex: '0 0 240px'}">
       <siderMenu></siderMenu>
     </Sider>
     <Layout>
       <Header style="background-color: #ffffff">Header</Header>
       <Content style="padding: 10px;">
-        <div style="width:100%;height: 100%;">
+        <div style="width:100%;height: 100%;position: relative;">
           <router-view/>
         </div>
       </Content>
