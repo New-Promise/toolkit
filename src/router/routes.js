@@ -36,6 +36,15 @@ export default [
           icon: 'ios-navigate',
           title: 'json工具'
         }
+      },
+      {
+        path: '/testTable',
+        name: 'testTable',
+        component: () => import('@/views/table/testTable.vue'),
+        meta: {
+          icon: 'ios-navigate',
+          title: '表格'
+        }
       }
     ]
   },
