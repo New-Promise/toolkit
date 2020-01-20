@@ -1,10 +1,10 @@
 <template>
   <div style="text-align: center">
-    <Col v-for="(item, index) in iconData" :key="index" style="margin:30px;width: 1020px;display: inline-block;box-shadow:0 0 5px #607D8B;border-radius: 10px;">
+    <Col v-for="(item, index) in iconData" :key="index" style="margin:30px;width: 1020px;display: inline-block;box-shadow:0 0 3px #607D8B;border-radius: 10px;">
       <Card>
         <p slot="title" class="title">
           <span>{{item.title}}</span>
-          <Button type="dashed" ghost @click="addToolFn" icon="md-add" style="float: right;margin-right: 10px;color:#2c3e50;">
+          <Button type="dashed" ghost @click="addToolFn" icon="md-add" style="float: right;margin-right: 20px;color:#2c3e50;width: 25px;height: 25px;">
           </Button>
         </p>
         <ul class="mainBox">
@@ -97,8 +97,8 @@ export default {
   .title{
     text-align: left;
     font-weight: 600;
-    height: 35px;
-    line-height: 35px;
+    height: 19px;
+    line-height: 19px;
   }
   .mainBox{
     display: flex;
